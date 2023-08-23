@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Logo Animation */
+/* .bump {
+    animation: bump 1s ease-out forwards;
+}
+
+@keyframes bump {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
+
+/* Form Animation */
+@keyframes drop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+img {
+    animation-name: drop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+
+/*  */
+
+.my-swal-container {
+    margin: 0rem 3rem 0rem 0rem !important;
+}
+
+
+/* FOr removing input arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+/* Scrollbar */
+@layer utilities {
+    .scrollbar-medium::-webkit-scrollbar {
+        height: 7px;
+        width: 7px;
+        border-radius: 100%
+    }
+
+    .rounded-scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 9999px;
+    }
+}
+
+
+
+.bubble {
+    /* position: relative; */
+    background: #a8aeb5;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #a8aeb5;
+    border-width: 14px 0 14px 20px;
+    top: 50%;
+    right: -20px;
+    margin-top: -14px;
+}
